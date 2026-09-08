@@ -22,7 +22,7 @@ function App() {
   return (
     <WishlistProvider>
       <CartProvider>
-        <BrowserRouter>
+        <BrowserRouter basename="/elanStore">
           <Routes>
             <Route path="/" element={<LoginPage onLogin={() => setIsLoggedIn(true)} />} />
             <Route path="/home" element={<HomePage onLogout={() => setIsLoggedIn(false)} />} />
