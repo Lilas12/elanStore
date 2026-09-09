@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
+// Importera bakgrundsbilden direkt så att Vite/React hittar den korrekt
+import bgImage from "../photos/file.png";
+
 const pageFade = keyframes`
   from { opacity: 0; }
   to { opacity: 1; }
@@ -63,7 +66,7 @@ const ImageSide = styled.section`
   background-image:
     linear-gradient(90deg, rgba(0,0,0,0.55), rgba(0,0,0,0.20)),
     linear-gradient(180deg, rgba(0,0,0,0.20), rgba(0,0,0,0.60)),
-    url("/src/photos/file.png");
+    url(${bgImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
